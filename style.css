@@ -1,0 +1,319 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Poppins";
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1.5;
+  font-family: "Poppins";
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+/* Start styling */
+
+/* header-area start */
+header.header-area {
+  background: #f5f5f5;
+  padding: 5px 15px;
+  border-bottom: 1px solid #1f9df9;
+}
+
+.logo-area {
+  width: 50%;
+  float: left;
+}
+
+.logo-area a {
+  display: block;
+  max-width: 50px;
+  /* vertical-align: middle !important; */
+}
+
+.logo-area a img {
+  max-width: 100%;
+}
+
+.assignment-area {
+  text-align: right;
+  width: 50%;
+  float: left;
+}
+
+.ass-btn a {
+  display: inline-block;
+  background: #1f9df9;
+  padding: 9px 40px;
+  color: #fff;
+  font-size: 18px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 32px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+/* header-area end */
+
+/* sidebar start  start */
+aside#sidebar {
+  width: 300px;
+  height: calc(100vh - 68px);
+  border-right: 1px solid #1f9df9;
+  position: fixed;
+  left: 0;
+  top: 68px;
+}
+/* sidebar start  end */
+
+.accordion-item {
+  background: rgb(255, 255, 255);
+  /* border-bottom: 1px solid rgb(204, 204, 204); */
+  position: relative;
+}
+div#classModule {
+  border: 1px solid rgb(204, 204, 204);
+}
+.accordion-header {
+  padding: 10px 15px;
+  background: #efefef;
+}
+.accordion-item:last-child {
+  border: 0px;
+}
+.accordion-body {
+  padding: 10px 25px;
+  display: none;
+}
+.accordion-body.show {
+  padding: 10px 15px;
+  display: block;
+}
+.accordion-body ul li {
+  position: relative;
+  padding: 5px 0px 5px 25px;
+  text-transform: capitalize;
+  font-size: 16px;
+}
+.accordion-body ul li::before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: transparent;
+  border-radius: 50%;
+  top: 15px;
+  left: 0px;
+  border: 2px solid rgb(31, 157, 249);
+  transform: translateY(-50%);
+}
+.accordion-body ul {
+  padding: 0px 0px 0px 3px;
+}
+.accordion-item i {
+  position: absolute;
+  right: 15px;
+  top: 23px;
+  background: rgb(141, 141, 156);
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+  transition: all 0.3s ease 0s;
+  transform: translateY(-50%);
+}
+.class-content {
+  max-width: 700px;
+  margin: 0px auto;
+}
+.accordion-item h2 {
+  cursor: pointer;
+  border-bottom: 1px solid #e3e3e3;
+  font-weight: 600;
+  color: #8d8d8d;
+}
+.accordion-item.active h2 {
+  color: rgb(31, 157, 249) !important;
+}
+.accordion-item.active i {
+  background: rgb(31, 157, 249);
+  transform: rotate(180deg);
+}
+.accordion-item.active i {
+  top: 12px;
+}
+.accordion-body ul li a {
+  text-decoration: none;
+  color: #333;
+}
+.accordion-body ul li a.play {
+  color: #1f9df9;
+}
+.accordion-body ul li a span {
+  display: none;
+}
+
+/* main style */
+main.main-content {
+  width: calc(100% - 300px);
+  height: calc(100vh - 68px);
+  background: #f2f2f2;
+  margin-left: 300px;
+  position: relative;
+}
+main.main-content iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+main.main-content .row {
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+div#class-video {
+  width: 100%;
+  height: calc(100vh - 107px);
+  position: relative;
+}
+
+.ytp-pause-overlay.ytp-scroll-min {
+  display: none !important;
+}
+.ytp-pause-overlay.ytp-scroll-min {
+  display: none !important;
+}
