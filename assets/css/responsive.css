@@ -1,0 +1,42 @@
+div#mobile-menu-icon {
+  display: none;
+}
+@media all and (max-width: 991px) {
+  .ass-btn a {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 9px 30px;
+  }
+
+  .coming-soon h3 {
+    font-size: 30px;
+    text-align: center;
+  }
+  div#mobile-menu-icon {
+    display: block;
+  }
+  div#mobile-menu-icon img {
+    animation: rotate 2s infinite linear;
+    position: relative;
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .class-item.mobile-menu {
+    left: 0px;
+  }
+  .class-item {
+    left: -220px;
+    width: 220px;
+  }
+
+  main.main-content {
+    width: 100%;
+    margin: 0;
+  }
+}

@@ -1,6 +1,6 @@
 $(document).ready(function () {
-  if ($(".accordion-item").length > 0) {
-    $(".accordion-item").append('<i class="fas fa-angle-down"></i>');
+  if ($(".accordion-item h2").length > 0) {
+    $(".accordion-item h2").append('<i class="fas fa-angle-down"></i>');
   }
 
   // class module accordian
@@ -36,4 +36,21 @@ $(document).ready(function () {
       return false;
     });
   }
+
+  //   mobile menu
+  if ($("div#mobile-menu-icon").length) {
+    $("div#mobile-menu-icon").click(function () {
+      //   alert("hello");
+      $("#sidebar").toggleClass("mobile-menu");
+      $(".backDrop").fadeToggle();
+    });
+  }
+
+  // remove  backdrop
+  //   if ($("main.main-content.backDrop")[0]) {
+  $(".backDrop").click(function () {
+    $(this).fadeOut();
+    $("#sidebar").removeClass("mobile-menu");
+  });
+  //   }
 });

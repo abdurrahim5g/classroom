@@ -13,6 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.5.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
   </head>
   <body>
     <!-- header-area -->
@@ -27,7 +28,14 @@
             /></a>
           </div>
           <div class="assignment-area">
-            <div class="ass-btn"><a href="#"> Assignment </a></div>
+            <div class="ass-btn">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdsqBv3H4ePGSXQzwb4l0yM0r9o_Mam_jZZQkVeIX28WCGkJw/viewform?usp=sf_link"
+                target="_blank"
+              >
+                Assignment
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -36,9 +44,12 @@
 
     <!-- Sidebar end -->
     <aside class="class-item" id="sidebar">
+      <div id="mobile-menu-icon">
+        <img src="assets/images/sun.svg" alt="Menu Icon" />
+      </div>
       <div class="class-accordian">
         <!-- class item start -->
-        <div class="accordion-item">
+        <div class="accordion-item active">
           <h2 class="accordion-header">Class 1</h2>
           <div class="accordion-body show">
             <ul>
@@ -481,6 +492,7 @@
 
     <!-- main start -->
     <main class="main-content">
+      <div class="backDrop" style="display: none"></div>
       <div class="container">
         <div class="row">
           <div id="class-video">

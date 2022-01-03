@@ -146,7 +146,7 @@ header.header-area {
 }
 
 .logo-area {
-  width: 50%;
+  width: 30%;
   float: left;
 }
 
@@ -162,7 +162,7 @@ header.header-area {
 
 .assignment-area {
   text-align: right;
-  width: 50%;
+  width: 70%;
   float: left;
 }
 
@@ -185,13 +185,41 @@ header.header-area {
 /* header-area end */
 
 /* sidebar start  start */
-aside#sidebar {
+
+.class-item {
   width: 300px;
-  height: calc(100vh - 68px);
   border-right: 1px solid #1f9df9;
   position: fixed;
   left: 0;
   top: 68px;
+  overflow: visible;
+  z-index: 9999999;
+  transition: 0.3s;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  background: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f9df9;
+}
+.class-accordian {
+  border-right: 1px solid #1f9df9;
+  height: calc(100vh - 68px);
+  overflow: auto;
+}
+
+div#mobile-menu-icon {
+  position: absolute;
+  right: -41px;
+  top: 15px;
+  width: 40px;
+  height: 40px;
+  z-index: 999;
+  background: #1f9df9;
+  padding: 6px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
 }
 /* sidebar start  end */
 
@@ -204,7 +232,7 @@ div#classModule {
   border: 1px solid rgb(204, 204, 204);
 }
 .accordion-header {
-  padding: 10px 15px;
+  padding: 20px 15px;
   background: #efefef;
 }
 .accordion-item:last-child {
@@ -242,7 +270,7 @@ div#classModule {
 .accordion-item i {
   position: absolute;
   right: 15px;
-  top: 23px;
+  top: 32px;
   background: rgb(141, 141, 156);
   width: 20px;
   height: 20px;
@@ -271,7 +299,7 @@ div#classModule {
   transform: rotate(180deg);
 }
 .accordion-item.active i {
-  top: 12px;
+  top: 22px;
 }
 .accordion-body ul li a {
   text-decoration: none;
@@ -291,7 +319,20 @@ main.main-content {
   background: #f2f2f2;
   margin-left: 300px;
   position: relative;
+  transition: 0.3s;
 }
+.backDrop {
+  /* content: ""; */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgb(0 0 0 / 60%);
+  z-index: 99;
+  transition: 0.3s;
+}
+
 main.main-content iframe {
   position: absolute;
   width: 100%;
@@ -302,12 +343,12 @@ main.main-content iframe {
 main.main-content .row {
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 20px 60px;
 }
 
 div#class-video {
   width: 100%;
-  height: calc(100vh - 107px);
+  height: calc(100vh - 108px);
   position: relative;
 }
 
@@ -321,7 +362,7 @@ div#class-video {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 999999;
+  z-index: 9;
   background: #1f9df9;
   display: none;
 }
@@ -339,3 +380,5 @@ div#class-video {
   font-weight: 600;
   font-size: 50px;
 }
+
+/* Mobile menu */
