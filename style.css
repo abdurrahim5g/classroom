@@ -317,3 +317,25 @@ div#class-video {
 .ytp-pause-overlay.ytp-scroll-min {
   display: none !important;
 }
+.coming-soon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  background: #1f9df9;
+  display: none;
+}
+
+.coming-text {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+.coming-soon h3 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 50px;
+}
