@@ -334,10 +334,11 @@ main.main-content {
 }
 
 main.main-content iframe {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
   height: 100%;
   margin: 0 auto;
+  /* aspect-ratio: 16 / 4 !important; */
 }
 
 main.main-content .row {
@@ -348,8 +349,9 @@ main.main-content .row {
 
 div#class-video {
   width: 100%;
-  height: calc(100vh - 108px);
+  /* height: calc(100vh - 108px); */
   position: relative;
+  aspect-ratio: 16 / 9;
 }
 
 .ytp-pause-overlay.ytp-scroll-min {
