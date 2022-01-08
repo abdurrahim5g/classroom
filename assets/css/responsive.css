@@ -1,7 +1,15 @@
 div#mobile-menu-icon {
   display: none;
 }
+@media all and (max-width: 1440px) {
+  main.main-content .row {
+    padding: 15px;
+  }
+}
 @media all and (max-width: 991px) {
+  main.main-content .row {
+    margin: 60px 0 0 0;
+  }
   .ass-btn a {
     font-size: 16px;
     font-weight: 500;
