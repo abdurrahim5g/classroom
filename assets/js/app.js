@@ -23,6 +23,7 @@ $(document).ready(function () {
       $(".coming-soon").fadeOut(100);
     } else {
       $(".coming-soon").fadeIn(100);
+      $("#class-video iframe").attr("src", "");
     }
   }
 
