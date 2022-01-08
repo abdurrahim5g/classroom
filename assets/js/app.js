@@ -16,7 +16,7 @@ $(document).ready(function () {
 
   //  videoChange function
   function changeVideo(element) {
-    let videoId = $(element).find("span").html();
+    let videoId = $(element).find("span").html().trim();
     if (videoId !== "Coming") {
       const embedLink = "https://www.youtube.com/embed/" + videoId;
       $("#class-video iframe").attr("src", embedLink);
