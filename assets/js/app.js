@@ -8,8 +8,11 @@ $(document).ready(function () {
     $(".accordion-item h2").click(function () {
       $(".accordion-item").removeClass("active");
       $(this).parent(".accordion-item").addClass("active");
-      $(".accordion-item").children(".accordion-body").slideUp();
-      $(this).parent(".accordion-item").children(".accordion-body").slideDown();
+      $(".accordion-item").children(".accordion-body").slideUp(200);
+      $(this)
+        .parent(".accordion-item")
+        .children(".accordion-body")
+        .slideDown(200);
       // console.log("Hello World");
     });
   }
