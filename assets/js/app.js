@@ -17,25 +17,31 @@ $(document).ready(function () {
     });
   }
 
-  //  videoChange function
+  // Video change handler
   function changeVideo(element) {
-    let videoId = $(element).find("span").html().trim();
-    if (videoId !== "Coming") {
-      const embedLink = "https://www.youtube.com/embed/" + videoId;
-      $("#class-video iframe").attr("src", embedLink);
-      $(".coming-soon").fadeOut(100);
+    const oldId = $("#class-video iframe").attr("src").slice(30, 41);
+    let videoId = $(element).find("span").text().trim();
+
+    if (oldId !== videoId) {
+      if (videoId !== "Coming") {
+        const embedLink = "https://www.youtube.com/embed/" + videoId;
+        $("#class-video iframe").attr("src", embedLink);
+        $(".coming-soon").fadeOut(100);
+      } else {
+        $(".coming-soon").fadeIn(100);
+        $("#class-video iframe").attr("src", "");
+      }
     } else {
-      $(".coming-soon").fadeIn(100);
-      $("#class-video iframe").attr("src", "");
+      return false;
     }
   }
 
-  if ($(".accordion-body ul li a").length > 0) {
-    $(".accordion-body ul li a").click(function () {
+  if ($(".accordion-body a").length > 0) {
+    $(".accordion-body a").click(function () {
       // exicure the changeVideo() Function
       changeVideo(this);
 
-      $(".accordion-body ul li a").removeClass("play");
+      $(".accordion-body a").removeClass("play");
       $(this).addClass("play");
       return false;
     });
@@ -44,17 +50,14 @@ $(document).ready(function () {
   //   mobile menu
   if ($("div#mobile-menu-icon").length) {
     $("div#mobile-menu-icon").click(function () {
-      //   alert("hello");
       $("#sidebar").toggleClass("mobile-menu");
       $(".backDrop").fadeToggle();
     });
   }
 
   // remove  backdrop
-  //   if ($("main.main-content.backDrop")[0]) {
   $(".backDrop").click(function () {
     $(this).fadeOut();
     $("#sidebar").removeClass("mobile-menu");
   });
-  //   }
 });
