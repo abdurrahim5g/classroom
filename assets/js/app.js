@@ -36,12 +36,12 @@ $(document).ready(function () {
     }
   }
 
-  if ($(".accordion-body a").length > 0) {
-    $(".accordion-body a").click(function () {
+  if ($(".accordion-body > a").length > 0) {
+    $(".accordion-body > a").click(function () {
       // exicure the changeVideo() Function
       changeVideo(this);
 
-      $(".accordion-body a").removeClass("play");
+      $(".accordion-body > a").removeClass("play");
       $(this).addClass("play");
       return false;
     });

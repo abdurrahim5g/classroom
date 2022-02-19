@@ -251,7 +251,7 @@ div#classModule {
   display: block;
 }
 
-.accordion-body a {
+.accordion-body > a {
   display: block;
   text-decoration: none;
   color: #333;
@@ -264,7 +264,7 @@ div#classModule {
 .accordion-body a span {
   display: none;
 }
-.accordion-body a::before {
+.accordion-body > a::before {
   content: "";
   position: absolute;
   width: 7px;
@@ -384,3 +384,22 @@ div#class-video {
 }
 
 /* Mobile menu */
+
+.download {
+  text-align: center;
+  margin: 15px 0px 5px 0;
+}
+
+.download a {
+  display: inline-block;
+  min-width: 100px;
+  background: #ffffff;
+  padding: 5px;
+  border-radius: 39px;
+  box-shadow: 0 0 8px #919191;
+}
+
+.download a img {
+  vertical-align: middle;
+  max-width: 32px;
+}
